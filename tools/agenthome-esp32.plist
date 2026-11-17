@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Replace the paths and YOUR_USER (python3 must be 3.10+; macOS /usr/bin/python3 is 3.9), then copy to ~/Library/LaunchAgents/ -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.agenthome-esp32.push</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/ABSOLUTE/PATH/TO/python3</string>
+    <string>/ABSOLUTE/PATH/TO/agenthome-esp32/tools/push_usage.py</string>
+  </array>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>StandardOutPath</key><string>/Users/YOUR_USER/Library/Logs/agenthome-esp32/push.log</string>
+  <key>StandardErrorPath</key><string>/Users/YOUR_USER/Library/Logs/agenthome-esp32/push.err.log</string>
+</dict>
+</plist>
